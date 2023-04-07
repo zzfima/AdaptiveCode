@@ -7,7 +7,7 @@ namespace SimpleDependency
     {
         static void Main(string[] args)
         {
-            var ps = new MessagePrinterService();
+            IMessagePrinterService ps = new MessagePrinterService();
             ps.PrintService();
             Console.ReadLine();
         }
