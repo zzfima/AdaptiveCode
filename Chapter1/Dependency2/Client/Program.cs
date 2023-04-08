@@ -1,5 +1,6 @@
-﻿using Services;
-using ServicesInterfaces;
+﻿using Domain;
+using ServiceImplementations;
+using ServiceInterfaces;
 using SimpleInjector;
 using System;
 

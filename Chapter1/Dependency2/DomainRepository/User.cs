@@ -1,7 +1,7 @@
-﻿using ServicesInterfaces;
+﻿using Domain;
 using System;
 
-namespace Services
+namespace DomainRepository
 {
     public class User : IUser
     {

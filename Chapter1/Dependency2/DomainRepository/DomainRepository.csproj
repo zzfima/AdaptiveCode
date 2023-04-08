@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47DA6330-C9B4-49CA-9F97-270583821B6F}</ProjectGuid>
+    <ProjectGuid>{B5359FB8-AF06-4CF6-842D-3D0198073C06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controllers</RootNamespace>
-    <AssemblyName>Controllers</AssemblyName>
+    <RootNamespace>DomainRepository</RootNamespace>
+    <AssemblyName>DomainRepository</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -36,13 +36,14 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServicesInterfaces\ServiceInterfaces.csproj">
-      <Project>{1cfdaf2e-55b2-45e2-9a83-cf146edd15a8}</Project>
-      <Name>ServiceInterfaces</Name>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{563d809f-bdda-4b82-a3d3-36609a0256f9}</Project>
+      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

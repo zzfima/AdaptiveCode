@@ -1,7 +1,8 @@
-﻿using ServicesInterfaces;
+﻿using Domain;
+using ServiceInterfaces;
 using System;
 
-namespace Services
+namespace ServiceImplementations
 {
     public class SecurityService : ISecurityService
     {

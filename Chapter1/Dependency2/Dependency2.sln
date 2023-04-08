@@ -5,11 +5,15 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{47DA6330-C9B4-49CA-9F97-270583821B6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{89D0C372-FAA3-4C7E-9376-924F4D9F1E81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceImplementations", "Services\ServiceImplementations.csproj", "{89D0C372-FAA3-4C7E-9376-924F4D9F1E81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{30614B64-3A5B-4241-928B-445AC6A1BA52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesInterfaces", "ServicesInterfaces\ServicesInterfaces.csproj", "{1CFDAF2E-55B2-45E2-9A83-CF146EDD15A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceInterfaces", "ServicesInterfaces\ServiceInterfaces.csproj", "{1CFDAF2E-55B2-45E2-9A83-CF146EDD15A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{563D809F-BDDA-4B82-A3D3-36609A0256F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainRepository", "DomainRepository\DomainRepository.csproj", "{B5359FB8-AF06-4CF6-842D-3D0198073C06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{1CFDAF2E-55B2-45E2-9A83-CF146EDD15A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CFDAF2E-55B2-45E2-9A83-CF146EDD15A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CFDAF2E-55B2-45E2-9A83-CF146EDD15A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{563D809F-BDDA-4B82-A3D3-36609A0256F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563D809F-BDDA-4B82-A3D3-36609A0256F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563D809F-BDDA-4B82-A3D3-36609A0256F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563D809F-BDDA-4B82-A3D3-36609A0256F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5359FB8-AF06-4CF6-842D-3D0198073C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5359FB8-AF06-4CF6-842D-3D0198073C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5359FB8-AF06-4CF6-842D-3D0198073C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5359FB8-AF06-4CF6-842D-3D0198073C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

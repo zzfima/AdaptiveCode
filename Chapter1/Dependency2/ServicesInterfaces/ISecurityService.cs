@@ -1,4 +1,4 @@
-﻿namespace ServicesInterfaces
+﻿namespace ServiceInterfaces
 {
     public interface ISecurityService
     {

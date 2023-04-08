@@ -1,4 +1,4 @@
-﻿namespace ServicesInterfaces
+﻿namespace Domain
 {
     public interface IUser
     {

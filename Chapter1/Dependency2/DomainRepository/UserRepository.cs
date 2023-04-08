@@ -1,7 +1,6 @@
 ﻿using Domain;
-using DomainRepository;
 
-namespace ServiceImplementations
+namespace DomainRepository
 {
     public class UserRepository : IUserRepository
     {
