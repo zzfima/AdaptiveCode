@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ServicesInterfaces;
+using System;
 
 namespace Services
 {
-    public class User
+    public class User : IUser
     {
         public int Id { get; set; }
         public void ChangePassword(string newPassord)

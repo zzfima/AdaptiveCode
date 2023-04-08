@@ -1,8 +1,10 @@
-﻿namespace Services
+﻿using ServicesInterfaces;
+
+namespace Services
 {
     public class UserRepository : IUserRepository
     {
-        public User GetByID(int userID)
+        public IUser GetByID(int userID)
         {
             return new User() { Id = 456 };
         }

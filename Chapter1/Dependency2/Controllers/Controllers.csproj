@@ -40,9 +40,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services.csproj">
-      <Project>{89d0c372-faa3-4c7e-9376-924f4d9f1e81}</Project>
-      <Name>Services</Name>
+    <ProjectReference Include="..\ServicesInterfaces\ServicesInterfaces.csproj">
+      <Project>{1cfdaf2e-55b2-45e2-9a83-cf146edd15a8}</Project>
+      <Name>ServicesInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

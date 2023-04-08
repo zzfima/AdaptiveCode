@@ -52,6 +52,10 @@
       <Project>{47da6330-c9b4-49ca-9f97-270583821b6f}</Project>
       <Name>Controllers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServicesInterfaces\ServicesInterfaces.csproj">
+      <Project>{1cfdaf2e-55b2-45e2-9a83-cf146edd15a8}</Project>
+      <Name>ServicesInterfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{89d0c372-faa3-4c7e-9376-924f4d9f1e81}</Project>
       <Name>Services</Name>
