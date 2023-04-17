@@ -2,6 +2,12 @@
 {
     public class AgeCalculatorNoAOP
     {
+        public AgeCalculatorNoAOP()
+        {
+            Console.WriteLine("AgeCalculatorNoAOP ctor strted");
+            Console.WriteLine("AgeCalculatorNoAOP ctor finished");
+        }
+
         public int Add(int a, int b)
         {
             if (a < 0 || b < 0)

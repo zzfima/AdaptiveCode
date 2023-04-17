@@ -5,6 +5,10 @@ namespace AOPExample.BL
     [TraceAspectAttributeCalcAge]
     public class AgeCalculatorAOP
     {
+        public AgeCalculatorAOP()
+        {
+        }
+
         public int Add(int a, int b)
         {
             if (a < 0 || b < 0)

@@ -4,20 +4,34 @@ namespace AOPExample.Aspects
 {
     [Aspect(Scope.Global)]
     [Injection(typeof(TraceAspectAttributeCalcAge))]
-    public class TraceAspectAttributeCalcAge : TraceAspectAttribute
+    public sealed class TraceAspectAttributeCalcAge : Attribute
     {
+        #region Methods
         [Advice(Kind.Before, Targets = Target.Method)]
-        public override void TraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+        public void MethodTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
         {
-            base.TraceStart(type, name);
             Console.WriteLine($"Get ages for {name}");
         }
 
         [Advice(Kind.After, Targets = Target.Method)]
-        public override void TraceFinish([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+        public void MethodTraceFinish([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
         {
-            base.TraceFinish(type, name);
             Console.WriteLine("Calculation done");
         }
+        #endregion
+
+        #region Constructors
+        [Advice(Kind.Before, Targets = Target.Constructor)]
+        public void ConstructorTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+        {
+            Console.WriteLine($"{type.Name} ctor strted");
+        }
+
+        [Advice(Kind.After, Targets = Target.Constructor)]
+        public void ConstructorTraceFinished([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+        {
+            Console.WriteLine($"{type.Name} ctor finished");
+        }
+        #endregion
     }
 }
