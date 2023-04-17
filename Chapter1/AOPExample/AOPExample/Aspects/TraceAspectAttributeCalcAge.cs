@@ -1,4 +1,5 @@
-﻿using AspectInjector.Broker;
+﻿using AOPExample.Logging;
+using AspectInjector.Broker;
 
 namespace AOPExample.Aspects
 {
@@ -10,13 +11,15 @@ namespace AOPExample.Aspects
         [Advice(Kind.Before, Targets = Target.Method)]
         public void MethodTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
         {
-            Console.WriteLine($"Get ages for {name}");
+            Logger.Log($"[{DateTime.UtcNow}] {name} method started");
+            Logger.Log("Calculation start");
         }
 
         [Advice(Kind.After, Targets = Target.Method)]
         public void MethodTraceFinish([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
         {
-            Console.WriteLine("Calculation done");
+            Logger.Log("Calculation done");
+            Logger.Log($"[{DateTime.UtcNow}] {name} method finished");
         }
         #endregion
 
@@ -24,30 +27,33 @@ namespace AOPExample.Aspects
         [Advice(Kind.Before, Targets = Target.Constructor)]
         public void ConstructorTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
         {
-            Console.WriteLine($"{type.Name} ctor strted");
+            Logger.Log($"[{DateTime.UtcNow}] {type.Name} ctor started");
+            Logger.Log($"{type.Name} initialization started");
         }
 
         [Advice(Kind.After, Targets = Target.Constructor)]
         public void ConstructorTraceFinished([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
         {
-            Console.WriteLine($"{type.Name} ctor finished");
+            Logger.Log($"{type.Name} initialization finished");
+            Logger.Log($"[{DateTime.UtcNow}] {type.Name} ctor finished");
         }
         #endregion
-
-        #region Constructors
-        [Advice(Kind.Before, Targets = Target.AnyScope)]
-        public void AnyTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
-        {
-            Console.WriteLine($"-->{name}");
-        }
 
         /*
-        [Advice(Kind.After, Targets = Target.AnyScope)]
-        public void AnyTraceFinished([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
-        {
-            Console.WriteLine("-->");
-        }
+                #region AnyCode
+                [Advice(Kind.Before, Targets = Target.AnyScope)]
+                public void AnyTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+                {
+                    Logger.Log($"-->{name}");
+                }
+
+                [Advice(Kind.After, Targets = Target.AnyScope)]
+                public void AnyTraceFinished([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+                {
+                    Logger.Log("-->");
+                }
+
+                #endregion
         */
-        #endregion
     }
 }

@@ -1,32 +1,41 @@
-﻿namespace AOPExample.BL
+﻿using AOPExample.Logging;
+
+namespace AOPExample.BL
 {
     public class AgeCalculatorNoAOP
     {
         public AgeCalculatorNoAOP()
         {
-            Console.WriteLine("AgeCalculatorNoAOP ctor strted");
-            Console.WriteLine("AgeCalculatorNoAOP ctor finished");
+            Logger.Log($"[{DateTime.UtcNow}] AgeCalculatorNoAOP ctor start");
+
+            Logger.Log("AgeCalculatorNoAOP initialization started");
+            //initializations
+            Logger.Log("AgeCalculatorNoAOP initialization finished");
+
+            Logger.Log($"[{DateTime.UtcNow}] AgeCalculatorNoAOP ctor finished");
         }
 
         public int Add(int a, int b)
         {
-            if (a < 0 || b < 0)
-                throw new ArgumentOutOfRangeException("Age must be positive");
+            Logger.Log($"[{DateTime.UtcNow}] Add method started");
 
-            Console.WriteLine("Get ages for Add");
+            Logger.Log("Calculation start");
             var answer = a + b;
-            Console.WriteLine("Calculation done");
+            Logger.Log("Calculation done");
+
+            Logger.Log($"[{DateTime.UtcNow}] Add method finished");
             return answer;
         }
 
         public int Sub(int a, int b)
         {
-            if (a < 0 || b < 0)
-                throw new ArgumentOutOfRangeException("Age must be positive");
+            Logger.Log($"[{DateTime.UtcNow}] Sub method started");
 
-            Console.WriteLine("Get ages for Add");
+            Logger.Log("Calculation start");
             var answer = a - b;
-            Console.WriteLine("Calculation done");
+            Logger.Log("Calculation done");
+
+            Logger.Log($"[{DateTime.UtcNow}] Sub method finished");
             return answer;
         }
     }
