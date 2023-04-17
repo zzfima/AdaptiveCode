@@ -33,5 +33,21 @@ namespace AOPExample.Aspects
             Console.WriteLine($"{type.Name} ctor finished");
         }
         #endregion
+
+        #region Constructors
+        [Advice(Kind.Before, Targets = Target.AnyScope)]
+        public void AnyTraceStart([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+        {
+            Console.WriteLine($"-->{name}");
+        }
+
+        /*
+        [Advice(Kind.After, Targets = Target.AnyScope)]
+        public void AnyTraceFinished([Argument(Source.Type)] Type type, [Argument(Source.Name)] string name)
+        {
+            Console.WriteLine("-->");
+        }
+        */
+        #endregion
     }
 }
