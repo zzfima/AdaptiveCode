@@ -1,5 +1,9 @@
-﻿using AOPExample;
+﻿using AOPExample.BL;
 
-AgeCalculator ageCalculator = new AgeCalculator();
-Console.WriteLine(ageCalculator.Add(5, 6));
+AgeCalculatorNoAOP ageCalculatorNoAOP = new AgeCalculatorNoAOP();
+Console.WriteLine(ageCalculatorNoAOP.Add(5, 6));
+
+AgeCalculatorAOP ageCalculatorAOP = new AgeCalculatorAOP();
+Console.WriteLine(ageCalculatorAOP.Add(5, 6));
+
 Console.ReadLine();

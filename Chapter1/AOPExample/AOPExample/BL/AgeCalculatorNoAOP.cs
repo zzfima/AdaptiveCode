@@ -1,6 +1,6 @@
-﻿namespace AOPExample
+﻿namespace AOPExample.BL
 {
-    internal class AgeCalculator
+    public class AgeCalculatorNoAOP
     {
         public int Add(int a, int b)
         {
