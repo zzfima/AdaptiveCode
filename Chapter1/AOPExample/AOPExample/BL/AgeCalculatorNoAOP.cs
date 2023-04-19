@@ -6,7 +6,7 @@ namespace AOPExample.BL
     {
         public AgeCalculatorNoAOP()
         {
-            Logger.Log($"[{DateTime.UtcNow}] AgeCalculatorNoAOP ctor start");
+            Logger.Log($"[{DateTime.UtcNow}] AgeCalculatorNoAOP ctor started");
 
             Logger.Log("AgeCalculatorNoAOP initialization started");
             //initializations
