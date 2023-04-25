@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixinsUsingExtentionsMethods", "Mixins\MixinsUsingExtentionsMethods.csproj", "{C98B36C3-8D8A-4B6E-9550-2ABFA45F45E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixinsUsingRemotionRemix", "MixinsUsingRemotionRemix\MixinsUsingRemotionRemix.csproj", "{F852A93E-BEB2-4519-B0F0-115A5CC17520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixinsUsingRemotion", "MixinsUsingRemotion\MixinsUsingRemotion.csproj", "{17F709F6-2B32-4672-90CE-DCE56D8AD487}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C98B36C3-8D8A-4B6E-9550-2ABFA45F45E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C98B36C3-8D8A-4B6E-9550-2ABFA45F45E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C98B36C3-8D8A-4B6E-9550-2ABFA45F45E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F852A93E-BEB2-4519-B0F0-115A5CC17520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F852A93E-BEB2-4519-B0F0-115A5CC17520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F852A93E-BEB2-4519-B0F0-115A5CC17520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F852A93E-BEB2-4519-B0F0-115A5CC17520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F709F6-2B32-4672-90CE-DCE56D8AD487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F709F6-2B32-4672-90CE-DCE56D8AD487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F709F6-2B32-4672-90CE-DCE56D8AD487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F709F6-2B32-4672-90CE-DCE56D8AD487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
