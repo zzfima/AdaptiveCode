@@ -1,7 +1,7 @@
 ﻿public class Adaptee
 {
-    public void MethodA()
+    public void MethodB()
     {
-        Console.WriteLine("Adaptee method a");
+        Console.WriteLine("Adaptee method b");
     }
 }

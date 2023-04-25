@@ -3,7 +3,7 @@
     Adaptee adaptee = new Adaptee();
     public void MethodA()
     {
-        adaptee.MethodA();
+        adaptee.MethodB();
         Console.WriteLine("Adapter method a");
     }
 }
