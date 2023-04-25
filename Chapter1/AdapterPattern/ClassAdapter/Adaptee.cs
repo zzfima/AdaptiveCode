@@ -4,7 +4,7 @@
     {
         public void MethodB()
         {
-            Console.WriteLine("MethodA adaptee");
+            Console.WriteLine("MethodB adaptee");
         }
     }
 }
