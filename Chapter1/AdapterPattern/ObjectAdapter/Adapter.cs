@@ -1,9 +1,14 @@
 ﻿internal class Adapter : IExpectedInterface
 {
-    Adaptee adaptee = new Adaptee();
+    ITarget _target;
+    public Adapter(ITarget target)
+    {
+        _target = target;
+    }
+
     public void MethodA()
     {
-        adaptee.MethodB();
+        _target.MethodB();
         Console.WriteLine("Adapter method a");
     }
 }

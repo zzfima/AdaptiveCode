@@ -1,4 +1,4 @@
-﻿public class Adaptee
+﻿public class Target : ITarget
 {
     public void MethodB()
     {

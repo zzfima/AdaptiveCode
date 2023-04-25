@@ -1,4 +1,4 @@
-﻿DoWork(new Adapter());
+﻿DoWork(new Adapter(new Target()));
 
 void DoWork(IExpectedInterface adapter)
 {
