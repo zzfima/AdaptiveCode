@@ -1,6 +1,6 @@
 ﻿namespace ClassAdapter
 {
-    public interface IAdapter
+    public interface IExpectedInterface
     {
         void MethodB();
     }

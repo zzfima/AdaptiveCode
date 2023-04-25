@@ -1,6 +1,6 @@
 ﻿namespace ClassAdapter
 {
-    public class Adapter : IAdapter
+    public class Adapter : IExpectedInterface
     {
         private readonly Adaptee _adaptee;
 
