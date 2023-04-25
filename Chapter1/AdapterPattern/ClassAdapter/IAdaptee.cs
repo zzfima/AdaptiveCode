@@ -2,6 +2,6 @@
 {
     public interface IAdaptee
     {
-        void MethodA();
+        void MethodB();
     }
 }

@@ -2,7 +2,7 @@
 {
     public class Adaptee : IAdaptee
     {
-        public void MethodA()
+        public void MethodB()
         {
             Console.WriteLine("MethodA adaptee");
         }

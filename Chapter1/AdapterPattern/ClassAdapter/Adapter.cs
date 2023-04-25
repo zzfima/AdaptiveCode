@@ -8,10 +8,10 @@
         {
             _adaptee = new Adaptee();
         }
-        public void MethodB()
+        public void MethodA()
         {
             Console.WriteLine("Adapter: ");
-            _adaptee.MethodA();
+            _adaptee.MethodB();
         }
     }
 }

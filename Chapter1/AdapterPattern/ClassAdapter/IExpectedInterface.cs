@@ -2,6 +2,6 @@
 {
     public interface IExpectedInterface
     {
-        void MethodB();
+        void MethodA();
     }
 }

@@ -1,6 +1,4 @@
-﻿using ClassAdapter;
-
-DoWork(new Adapter());
+﻿DoWork(new Adapter());
 
 void DoWork(IExpectedInterface adapter)
 {
