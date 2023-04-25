@@ -2,14 +2,14 @@
 {
     public void Walk()
     {
-        Console.WriteLine("The swan is walking.");
+        Console.WriteLine("\tThe swan is walking.");
     }
     public void Swim()
     {
-        Console.WriteLine("The swan can swim like a duck.");
+        Console.WriteLine("\tThe swan can swim like a duck.");
     }
     public void Quack()
     {
-        Console.WriteLine("The swan is quacking.");
+        Console.WriteLine("\tThe swan is quacking.");
     }
 }
