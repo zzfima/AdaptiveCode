@@ -1,6 +1,6 @@
 ﻿namespace ClassAdapter
 {
-    public class Adaptee : IAdaptee
+    public class Adaptee
     {
         public void MethodB()
         {

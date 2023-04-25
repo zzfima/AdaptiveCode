@@ -2,7 +2,7 @@
 
 DoWork(new Adapter());
 
-void DoWork(IExpectedInterface adapter)
+void DoWork(Adapter adapter)
 {
     adapter.MethodA();
 }
