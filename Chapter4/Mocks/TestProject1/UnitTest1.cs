@@ -1,26 +1,31 @@
 using Moq;
 using Sensor;
-using System.Resources;
+using Sensors;
 
 namespace TestProject1
 {
     [TestClass]
     public class UnitTest1
     {
-        private Mock<ISensor>? _deviceMocked;
+
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(_deviceMocked?.Object.DoOperation("a"), "aaa");
-            Assert.AreEqual(_deviceMocked?.Object.DoOperation("b"), "bbb");
-        }
+            Mock<ISensor>? sensor1 = new Mock<ISensor>();
+            Mock<ISensor>? sensor2 = new Mock<ISensor>();
+            Mock<ISensor>? sensor3 = new Mock<ISensor>();
 
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            _deviceMocked = new Mock<ISensor>();
-            _deviceMocked.Setup(d => d.DoOperation("a")).Returns("aaa");
-            _deviceMocked.Setup(d => d.DoOperation("b")).Returns("bbb");
+            sensor1.Setup(s => s.MeasureTemperature()).Returns(4.5);
+            sensor2.Setup(s => s.MeasureTemperature()).Returns(4.5);
+            sensor3.Setup(s => s.MeasureTemperature()).Returns(4.5);
+
+            var sensorMng = new SensorManagement();
+
+            sensorMng.AddSensor(sensor1.Object);
+            sensorMng.AddSensor(sensor2.Object);
+            sensorMng.AddSensor(sensor3.Object);
+
+            Assert.AreEqual(sensorMng.GetAverage(), 4.5, 0.1);
         }
     }
 }
